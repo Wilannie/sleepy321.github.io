@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+
+/* 國際編碼一定要在第一行，字體一定要在第二行，前面不可以加任何註解或內容 */
+
+body{
+    font-family: Helvetica, Arial,"黑體-繁","Heiti TC","微軟正黑體","Microsoft JhengHei",sans-serif;
+}
+img{
+    display: block;
+    width: 100%;
+}
+/* ----------header的部分---------- */
+/* header{} */
