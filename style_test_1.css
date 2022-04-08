@@ -47,9 +47,9 @@ header h2{
     /* background: #C1DFE8; */
 }
 .question_1, .question_2, .question_3{
-
     display: flex;
     z-index: 99999;
+    font-size: 20px;
     justify-content: center;
     color: #C1DFE8;
 }
@@ -58,10 +58,25 @@ header h2{
     justify-content: center;
     color: #C1DFE8;  
 }
+.btn_score button{
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: #0C1D44;
+    border: #C1DFE8 2px solid;
+    color: #C1DFE8;
+    /* padding: 15px 32px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    /* font-size: 16px; */
+}
 .end{
     position: relative;
 }
-.button{
+.btn_next{
     align-items: center;
     border-radius: 25px;
     background: #C1DFE8;
