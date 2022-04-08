@@ -6,13 +6,19 @@
 body{
     font-family: Helvetica, Arial,"黑體-繁","Heiti TC","微軟正黑體","Microsoft JhengHei",sans-serif;
     background-color: #0C1D44;
+    height: 100%;
+
     /* height: 100vh; */
 }
 img{
     display: block;
     width: 100%;
 }
+.wrapper{
+    min-height: 100%;
+}
 /* ----------header的部分---------- */
+
 header .logo{
     width: 20%;
     /* position: relative; */
@@ -81,8 +87,10 @@ header h2{
 }
 footer{
     display: flex;
+    position: absolute;
+    bottom: 0;
     /* position: relative; */
-    justify-content: center;
+    /* justify-content: center; */
     /* align-items: center; */
     /* background-color: #C1DFE8; */
 }
@@ -91,4 +99,6 @@ footer{
     /* align-items: center; */
     color: #C1DFE8;
     font-size: 0.5rem;
+    left: auto;
+    right: auto;
 }
