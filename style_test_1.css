@@ -5,10 +5,89 @@
 
 body{
     font-family: Helvetica, Arial,"黑體-繁","Heiti TC","微軟正黑體","Microsoft JhengHei",sans-serif;
+    background-color: #0C1D44;
+    /* height: 100vh; */
 }
 img{
     display: block;
     width: 100%;
 }
 /* ----------header的部分---------- */
-/* header{} */
+header .logo{
+    width: 20%;
+    /* position: relative; */
+    display: flex;
+    /* top: 30px; */
+    left: auto;
+    right: auto;
+    margin: 30px auto;
+
+}
+header h2{
+    display: flex;
+    /* position: absolute; */
+    /* top: 5vh; */
+    justify-content: center;
+    color: #C1DFE8;
+}
+/* main{
+    position: relative;
+    display: inline;
+    height: 80vh;
+} */
+.box_test{
+    /* position: relative; */
+    top: 5vh;    
+    left: auto;
+    right: auto;
+    margin: auto;
+    /* background: #C1DFE8; */
+}
+.question_1, .question_2, .question_3{
+
+    display: flex;
+    z-index: 99999;
+    justify-content: center;
+    color: #C1DFE8;
+}
+.answer_1, .answer_2, .answer_3{
+    display: flex;
+    justify-content: center;
+    color: #C1DFE8;  
+}
+.end{
+    position: relative;
+}
+.button{
+    /* position: absolute; */
+    align-items: center;
+    border-radius: 25px;
+    background: #C1DFE8;
+    padding: 6px 0;
+    width: 30%;
+    margin: auto;
+    cursor: pointer;
+}
+.button a{
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    /* font-size: 1rem; */
+    font-size: 4vmin;
+    font-weight: 500;
+    /* letter-spacing: .1rem; 字距 */
+    color: #0C1D44;
+    cursor: pointer;
+}
+footer{
+    display: flex;
+    /* position: relative; */
+    justify-content: center;
+    /* align-items: center; */
+    /* background-color: #C1DFE8; */
+}
+.copyright{
+    /* justify-content: center; */
+    /* align-items: center; */
+    color: #C1DFE8;
+}
