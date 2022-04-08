@@ -7,7 +7,6 @@ body{
     font-family: Helvetica, Arial,"黑體-繁","Heiti TC","微軟正黑體","Microsoft JhengHei",sans-serif;
     background-color: #0C1D44;
     height: 100%;
-
     /* height: 100vh; */
 }
 img{
@@ -21,20 +20,18 @@ img{
 
 header .logo{
     width: 20%;
-    /* position: relative; */
     display: flex;
-    /* top: 30px; */
     left: auto;
     right: auto;
     margin: 30px auto;
-
+    /* position: relative; */
 }
 header h2{
     display: flex;
-    /* position: absolute; */
-    /* top: 5vh; */
     justify-content: center;
     color: #C1DFE8;
+    /* position: absolute; */
+    /* top: 5vh; */
 }
 /* main{
     position: relative;
@@ -42,11 +39,11 @@ header h2{
     height: 80vh;
 } */
 .box_test{
-    /* position: relative; */
     top: 5vh;    
     left: auto;
     right: auto;
     margin: auto;
+    /* position: relative; */
     /* background: #C1DFE8; */
 }
 .question_1, .question_2, .question_3{
@@ -65,7 +62,6 @@ header h2{
     position: relative;
 }
 .button{
-    /* position: absolute; */
     align-items: center;
     border-radius: 25px;
     background: #C1DFE8;
@@ -78,27 +74,30 @@ header h2{
     text-align: center;
     text-decoration: none;
     display: block;
-    /* font-size: 1rem; */
     font-size: 4vmin;
     font-weight: 500;
-    /* letter-spacing: .1rem; 字距 */
     color: #0C1D44;
     cursor: pointer;
+    /* letter-spacing: .1rem; 字距 */
+    /* font-size: 1rem; */
 }
 footer{
-    display: flex;
     position: absolute;
     bottom: 0;
+    /* display: flex; */
+    /* left: auto; */
+    /* right: auto; */
     /* position: relative; */
     /* justify-content: center; */
     /* align-items: center; */
     /* background-color: #C1DFE8; */
 }
 .copyright{
-    /* justify-content: center; */
-    /* align-items: center; */
+    display: flex;
     color: #C1DFE8;
     font-size: 0.5rem;
-    left: auto;
-    right: auto;
+    margin: 0 auto;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* position: relative; */
 }
