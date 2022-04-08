@@ -64,6 +64,7 @@ header p{
 }
 .question_1, .question_2, .question_3{
     display: flex;
+    text-align: center;
     z-index: 99999;
     font-size: 20px;
     justify-content: center;
@@ -140,6 +141,23 @@ header p{
     opacity: 1;
     right: 0;
   } */
+  /* @charset "UTF-8";
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Nunito", sans-serif;
+    color: #000;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+   */
+
 /* ----------footer---------- */
 footer{
     position: absolute;
