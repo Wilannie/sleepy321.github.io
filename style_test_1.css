@@ -7,6 +7,13 @@ body{
     font-family: Helvetica, Arial,"黑體-繁","Heiti TC","微軟正黑體","Microsoft JhengHei",sans-serif;
     background-color: #0C1D44;
     height: 100%;
+    /* 以下四個禁止複製的動作 */
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     /* height: 100vh; */
 }
 img{
@@ -17,7 +24,7 @@ img{
     position: relative;
     min-height: 100%;
 }
-/* ----------header的部分---------- */
+/* ----------header---------- */
 
 header .logo{
     width: 20%;
@@ -34,6 +41,12 @@ header h2{
     /* position: absolute; */
     /* top: 5vh; */
 }
+header p{
+    display: flex;
+    justify-content: center;
+    color: #c1dfe880;
+}
+/* ----------main---------- */
 /* main{
     position: relative;
     display: inline;
@@ -70,11 +83,17 @@ header h2{
     background-color: #0C1D44;
     border: #C1DFE8 2px solid;
     color: #C1DFE8;
+    cursor: pointer;
     /* padding: 15px 32px; */
     text-align: center;
     text-decoration: none;
+    transition: all .1s ease-in-out;
     /* display: inline-block; */
     /* font-size: 16px; */
+}
+.btn_score button:hover{
+    background-color: #4CAF50;
+    color: white;
 }
 .end{
     position: relative;
@@ -88,14 +107,16 @@ header h2{
     border-radius: 25px;
     background: #C1DFE8;
     padding: 6px 0;
-    width: 30%;
+    width: 20%;
     margin: 65px auto;
     cursor: pointer;
 }
+
 .btn_next a{
     text-align: center;
     text-decoration: none;
     display: block;
+    /* transition: 0.5s; */
     font-size: 4vmin;
     font-weight: 500;
     color: #0C1D44;
@@ -103,6 +124,23 @@ header h2{
     /* letter-spacing: .1rem; 字距 */
     /* font-size: 1rem; */
 }
+/* .btn_next a:after{
+    content: '»';
+    position: relative;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+.btn_next a:hover a {
+    padding-right: 25px;
+  }
+  
+.btn_next:hover a:after {
+    opacity: 1;
+    right: 0;
+  } */
+/* ----------footer---------- */
 footer{
     position: absolute;
     bottom: 0;
