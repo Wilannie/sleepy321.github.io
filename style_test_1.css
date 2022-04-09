@@ -62,7 +62,7 @@ header p{
     /* position: relative; */
     /* background: #C1DFE8; */
 }
-.question_1, .question_2, .question_3{
+.question_1, .question_2, .question_3, .question_4, .question_5, .question_6, .question_7, .question_8, .question_9{
     display: flex;
     text-align: center;
     z-index: 99999;
@@ -70,7 +70,7 @@ header p{
     justify-content: center;
     color: #C1DFE8;
 }
-.answer_1, .answer_2, .answer_3{
+.answer_1, .answer_2, .answer_3, .answer_4, .answer_5, .answer_6, .answer_7, .answer_8, .answer_9{
     display: flex;
     justify-content: center;
     color: #C1DFE8;  
