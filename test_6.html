@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-hant-tw">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+ <meta name="renderer" content="webkit">
+ <title>礙睏檢測</title>
+ <link rel="icon" href="images/favicon.ico.png"><!-- icon要改 -->
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <!-- 自己的CSS放下面，權重較重，可以用CSS去更改 -->
+  <link rel="stylesheet" href="style_test_1.css">
+</head>
+<body>
+    <div class="wrapper">
+         <header>
+        
+             <h1 class="logo">
+                 <img src="images/logo_large_logo.png" alt="礙睏檢測">
+             </h1>
+             <h2>依照近一個月來選擇最符合自身情況的程度選項</h2>
+             <p>1&nbsp&nbsp非常不符合&nbsp&nbsp→&nbsp&nbsp5&nbsp&nbsp非常符合</p>
+        
+        
+         </header>
+         <main>
+                 <div class="box_test">
+                     <div class="test_F">
+                         <div class="question_16">
+                             <p>花很多時間躺在床上卻總是睡不著，但即使睡不著，也還是會繼續躺在床上</p>
+                         </div>
+                         <div class="answer_16" required="required">
+                             <!-- <input class="answerbox" type="radio" name="chose" id="chose_1" checked> -->
+                             <!-- <label class="for_answerbox" for="chose_1">1</label> -->
+                             <div class="btn_score"><button name="chose" input type="button" value="0">1</button></div>
+                             <div class="btn_score"><button name="chose" input type="button" value="1">2</button></div>
+                             <div class="btn_score"><button name="chose" input type="button" value="2">3</button></div>
+                             <div class="btn_score"><button name="chose" input type="button" value="3">4</button></div>
+                             <div class="btn_score"><button name="chose" input type="button" value="4">5</button></div>
+                         </div>
+                         <div class="question_17">
+                             <p>當失眠後，我會選擇更早去躺床，期盼能增加睡眠時間</p>
+                         </div>
+                         <div class="answer_17" required="required">
+                             <div class="btn_score"><button name="chose" input type="button" value="0">1</button></div>
+                             <div class="btn_score"><button name="chose" input type="button" value="1">2</button></div>
+                             <div class="btn_score"><button name="chose" input type="button" value="2">3</button></div>
+                             <div class="btn_score"><button name="chose" input type="button" value="3">4</button></div>
+                             <div class="btn_score"><button name="chose" input type="button" value="4">5</button></div>
+                         </div>
+                         <div class="question_18">
+                             <p>我擔心對睡眠失去控制</p>
+                         </div>
+                         <div class="answer_18" required="required">
+                             <div class="btn_score"><button name="chose" type="button" value="0">1</button></div>
+                             <div class="btn_score"><button name="chose" type="button" value="1">2</button></div>
+                             <div class="btn_score"><button name="chose" type="button" value="2">3</button></div>
+                             <div class="btn_score"><button name="chose" type="button" value="3">4</button></div>
+                             <div class="btn_score"><button name="chose" type="button" value="4">5</button></div>
+                         </div>
+                      </div>
+                 </div>
+             <div class="end">
+                 <div class="btn_next">
+                     <a href="test_7.html">下一頁</a>
+                     <!-- <div class="next"><a href="#"><i class="fa-solid fa-arrow-right-long"></i></a></div> -->
+                     <!-- <div class="back"><a href="#"><i class="fa-solid fa-arrow-left-long"></i></a></div> -->
+                
+                 </div>
+             </div>
+        
+        
+
+            </main>
+    <footer>
+        <div class="copyright">淡江大學資訊傳播學系第21屆畢業製作《礙睏》 © 2022</div>
+    </footer>
+    </div>
+    
+    <!-- jQuery原生碼 CDN -->
+    <script src="./script/jquery-3.6.0.min.js"></script>
+    <!-- smoove js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+    <!-- 自訂的JS要放最下面，因為要先載入jQuery原生碼才能執行下面步驟 -->
+    <script src="./script/script_test.js"></script>
+
+</body>
+</html>
