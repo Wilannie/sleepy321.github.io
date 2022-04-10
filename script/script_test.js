@@ -443,7 +443,7 @@ $("#btn-D-10-2").click(function(){
   $("#btn-D-10-5").css("background-color", '#0C1D44');
 });
 $("#btn-D-10-3").click(function(){
-  Dscore_3=2;
+  Dscore_10=2;
   console.log("2");
   $("#btn-D-10-1").css("background-color", '#0C1D44');
   $("#btn-D-10-2").css("background-color", '#0C1D44');
@@ -467,7 +467,7 @@ $("#btn-D-10-5").click(function(){
   $("#btn-D-10-2").css("background-color", '#0C1D44');
   $("#btn-D-10-3").css("background-color", '#0C1D44');
   $("#btn-D-10-4").css("background-color", '#0C1D44');
-  $("#btn-DA-10-5").css("background-color", '#4CAF50');
+  $("#btn-D-10-5").css("background-color", '#4CAF50');
 });
 // D型Q11
 var Dscore_11;
@@ -1128,23 +1128,81 @@ $("#btn-H-24-5").click(function(){
   $("#btn-H-24-5").css("background-color", '#4CAF50');
 });
 
-// 得分
+// A得分/傳值
 $("#Anext").click(function Anext(){
-  sum = Ascore_1+Ascore_2+Ascore_3;
-  console.log("sum = "+sum);
-  location.href = "test_2_html?A="+sum;
+  Asum = Ascore_1+Ascore_2+Ascore_3;
+  console.log("分數 = "+Asum);
+  window.location.href = "test_2.html?A="+Asum;
 });
-  // var sum = location.search.replace(/[^\d]/g, "")
-  // console.log("分數 = "+sum)
-// 得分
-// $("#Bnext").click(function Bnext(){
-//   sum = Bscore_4+Bscore_5+Bscore_6;
-//   console.log("分數 = "+sum);
-//   location.href = "test_3_html?B="+sum;
-// });
+
+// 取值A
+var Asum = location.search.replace(/[^\d]/g, "")
+console.log("分數 = "+Asum);
+// B得分/傳值
+$("#Bnext").click(function Bnext(){
+  Bsum = Bscore_4+Bscore_5+Bscore_6;
+  console.log("分數 = "+Bsum);
+  window.location.href = "test_3.html?A="+Asum+"B="+Bsum;
+});
+
+// 取值B
+var Bsum = location.search.replace(/[^\d]/g, "")
+console.log("分數 = "+Bsum);
+// C得分/傳值
+$("#Cnext").click(function Cnext(){
+  Csum = Cscore_7+Cscore_8+Cscore_9;
+  console.log("sum = "+Csum);
+  window.location.href = "test_4.html?A="+Asum+"B="+Bsum+"C="+Csum;
+});
+
+// 取值C
+var Csum = location.search.replace(/[^\d]/g, "")
+console.log("分數 = "+Csum);
+// D得分/傳值
+$("#Dnext").click(function Dnext(){
+  Dsum = Dscore_10+Dscore_11+Dscore_12;
+  console.log("sum = "+Dsum);
+  window.location.href = "test_5.html?A="+Asum+"B="+Bsum+"C="+Csum+"D="+Dsum;
+});
+
+// 取值D
+var Dsum = location.search.replace(/[^\d]/g, "")
+console.log("分數 = "+Dsum);
+// E得分/傳值
+$("#Enext").click(function Enext(){
+  Esum = Escore_13+Escore_14+Escore_15;
+  console.log("sum = "+Esum);
+  window.location.href = "test_6.html?A="+Asum+"B="+Bsum+"C="+Csum+"D="+Dsum+"E="+Esum;
+});
+
+// 取值E
+var Esum = location.search.replace(/[^\d]/g, "")
+console.log("分數 = "+Esum);
+// F得分/傳值
+$("#Fnext").click(function Fnext(){
+  Fsum = Fscore_16+Fscore_17+Fscore_18;
+  console.log("sum = "+Fsum);
+  window.location.href = "test_7.html?A="+Asum+"B="+Bsum+"C="+Csum+"D="+Dsum+"E="+Esum+"F="+Fsum;
+});
+
+// 取值F
+var Fsum = location.search.replace(/[^\d]/g, "")
+console.log("分數 = "+Fsum);
+// G得分/傳值
+$("#Gnext").click(function Gnext(){
+  Gsum = Gscore_19+Gscore_20+Gscore_21;
+  console.log("sum = "+Gsum);
+  window.location.href = "test_8.html?A="+Asum+"B="+Bsum+"C="+Csum+"D="+Dsum+"E="+Esum+"F="+Fsum+"G="+Gsum;
+});
+
+// 取值G
+var Gsum = location.search.replace(/[^\d]/g, "")
+console.log("分數 = "+Gsum);
+// H得分/傳值
+$("#Hnext").click(function Hnext(){
+  Hsum = Hscore_22+Hscore_23+Hscore_24;
+  console.log("sum = "+Hsum);
+  window.location.href = "test_8.html?A="+Asum+"B="+Bsum+"C="+Csum+"D="+Dsum+"E="+Esum+"F="+Fsum+"G="+Gsum+"H="+Hsum;
+});
 
 // 查看結果
-// $("#result").click(function(){
-//   sum = Ascore_1+Ascore_2+Ascore_3+Bscore_4+Bscore_5+Bscore_6+Cscore_7+Cscore_8+Cscore_9+Dscore_10+Dscore_11+Dscore_12+Escore_13+Escore_14+Escore_15+Fscore_16+Fscore_17+Fscore_18+Gscore_19+Gscore_20+Gscore_21+Hscore_22+Hscore_23+Hscore_24;
-//   console.log("sum = "+sum);
-// });
