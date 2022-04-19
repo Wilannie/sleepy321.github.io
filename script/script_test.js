@@ -1131,78 +1131,224 @@ $("#btn-H-24-5").click(function(){
 // A得分/傳值
 $("#Anext").click(function Anext(){
   Asum = Ascore_1+Ascore_2+Ascore_3;
-  console.log("分數 = "+Asum);
-  window.location.href = "test_2.html?A="+Asum;
+  // console.log("分數 = "+Asum);
+  window.location.href = "test_2.html?Asum="+Asum;
 });
 
 // 取值A
 var Asum = location.search.replace(/[^\d]/g, "")
-console.log("分數 = "+Asum);
+console.log(location.search)
+// console.log("分數 = "+Asum);
 // B得分/傳值
 $("#Bnext").click(function Bnext(){
   Bsum = Bscore_4+Bscore_5+Bscore_6;
   console.log("分數 = "+Bsum);
-  window.location.href = "test_3.html?A="+Asum+"B="+Bsum;
+  window.location.href = "test_3.html?"+temp+"&Bsum="+Bsum;
 });
 
 // 取值B
-var Bsum = location.search.replace(/[^\d]/g, "")
-console.log("分數 = "+Bsum);
+// var Bsum = location.search.replace(/[^\d]/g, "")
+// console.log("分數 = "+Bsum);
+var test =location.search.replace("?","").split("&");
+var temp =location.search.replace("?","");
+console.log("temp = "+temp);
+console.log("test = "+test);
+console.log(location.search);
 // C得分/傳值
 $("#Cnext").click(function Cnext(){
   Csum = Cscore_7+Cscore_8+Cscore_9;
-  console.log("sum = "+Csum);
-  window.location.href = "test_4.html?A="+Asum+"B="+Bsum+"C="+Csum;
+  console.log("C分數 = "+Csum);
+  window.location.href = "test_4.html?"+temp+"&Csum="+Csum;
 });
 
 // 取值C
 var Csum = location.search.replace(/[^\d]/g, "")
-console.log("分數 = "+Csum);
 // D得分/傳值
 $("#Dnext").click(function Dnext(){
   Dsum = Dscore_10+Dscore_11+Dscore_12;
   console.log("sum = "+Dsum);
-  window.location.href = "test_5.html?A="+Asum+"B="+Bsum+"C="+Csum+"D="+Dsum;
+  window.location.href = "test_5.html?"+temp+"&Dsum="+Dsum;
 });
 
 // 取值D
 var Dsum = location.search.replace(/[^\d]/g, "")
-console.log("分數 = "+Dsum);
 // E得分/傳值
 $("#Enext").click(function Enext(){
   Esum = Escore_13+Escore_14+Escore_15;
   console.log("sum = "+Esum);
-  window.location.href = "test_6.html?A="+Asum+"B="+Bsum+"C="+Csum+"D="+Dsum+"E="+Esum;
+  window.location.href = "test_6.html?"+temp+"&Esum="+Esum;
 });
 
 // 取值E
 var Esum = location.search.replace(/[^\d]/g, "")
-console.log("分數 = "+Esum);
 // F得分/傳值
 $("#Fnext").click(function Fnext(){
   Fsum = Fscore_16+Fscore_17+Fscore_18;
   console.log("sum = "+Fsum);
-  window.location.href = "test_7.html?A="+Asum+"B="+Bsum+"C="+Csum+"D="+Dsum+"E="+Esum+"F="+Fsum;
+  window.location.href = "test_7.html?"+temp+"&Fsum="+Fsum;
 });
 
 // 取值F
 var Fsum = location.search.replace(/[^\d]/g, "")
-console.log("分數 = "+Fsum);
 // G得分/傳值
 $("#Gnext").click(function Gnext(){
   Gsum = Gscore_19+Gscore_20+Gscore_21;
   console.log("sum = "+Gsum);
-  window.location.href = "test_8.html?A="+Asum+"B="+Bsum+"C="+Csum+"D="+Dsum+"E="+Esum+"F="+Fsum+"G="+Gsum;
+  window.location.href = "test_8.html?"+temp+"&Gsum="+Gsum;
 });
 
 // 取值G
 var Gsum = location.search.replace(/[^\d]/g, "")
-console.log("分數 = "+Gsum);
+//轉成按鈕
+// $("#Hresult").replaceWith("<input type='submit' value='RESULT'>");
 // H得分/傳值
-$("#Hnext").click(function Hnext(){
+$("#Hresult").click(function Hresult(){
   Hsum = Hscore_22+Hscore_23+Hscore_24;
-  console.log("sum = "+Hsum);
-  window.location.href = "test_8.html?A="+Asum+"B="+Bsum+"C="+Csum+"D="+Dsum+"E="+Esum+"F="+Fsum+"G="+Gsum+"H="+Hsum;
-});
+  var result =location.search.replace("?","").split("&");
+  console.log(location.search);
 
+  result= result+",Hsum="+Hsum
+  console.log(result.split(","))
+  //
+  // result.split = test; 錯的
+  test = result.split(",");
+  console.log(test[0]); //Asum=9
+  Number(test[0].substring(5));
+  console.log(Number(test[0].substring(5)));
+  Number(test[1].substring(5));
+  console.log(Number(test[1].substring(5)));
+  Number(test[2].substring(5));
+  console.log(Number(test[2].substring(5)));
+  Number(test[3].substring(5));
+  console.log(Number(test[3].substring(5)));
+  Number(test[4].substring(5));
+  console.log(Number(test[4].substring(5)));
+  Number(test[5].substring(5));
+  console.log(Number(test[5].substring(5)));
+  Number(test[6].substring(5));
+  console.log(Number(test[6].substring(5)));
+  Number(test[7].substring(5));
+  console.log(Number(test[7].substring(5)));
+  // var myArray = []; 錯的
+  let myArray = test; //寫入陣列
+  myArray[0]= Number(test[0].substring(5));
+  myArray[1]= Number(test[1].substring(5));
+  myArray[2]= Number(test[2].substring(5));
+  myArray[3]= Number(test[3].substring(5));
+  myArray[4]= Number(test[4].substring(5));
+  myArray[5]= Number(test[5].substring(5));
+  myArray[6]= Number(test[6].substring(5));
+  myArray[7]= Number(test[7].substring(5));
+  console.log(myArray);
+  //可用
+  function MyMax(myArray){
+    var al = myArray.length;
+    maximum = myArray[al-1];
+    while (al--){
+        if(myArray[al] > maximum){
+            maximum = myArray[al]
+        }
+    }
+            return maximum;
+  };
+  var m = MyMax(myArray);
+  console.log(m)
+  //
+  var type = ["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床是我的唯一型","一問三不知型"];
+  for(i=0;i<myArray.length;i++){
+    if(myArray[i]==m){
+     console.log(type[i]+":"+myArray[i])
+    }
+   }
+  //
+  [myArray[0],myArray[1],myArray[2],myArray[3],myArray[4],myArray[5],myArray[6],myArray[7]]
+  ["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床是我的唯一型","一問三不知型"]
+  
+  // for(i=0;i<myArray.length;i++){
+  //   if(myArray[i]==m){
+  //    console.log(myArray[i])
+  //   }
+    
+  //  }
+  // document.write(test[0].substring(5)); 得出9，導至新頁面
+  // 可用
+  // var myArray = result.split;
+  // document.write(myArray[0].substring(5));
+  // console.log(myArray[0]);
+
+  // var m = Math.max(myArray);
+  // console.log(m)
+
+  // let myArray;
+  // let to = myArray.substring(1, 4);
+  //NaN
+  
+  // document.write(test[0].substring(5));
+//   console.log(test[0].substring(5)) 
+// //   function MyMax(myarr){
+//     var al = myarr.length;
+//     maximum = myarr[al-1];
+//     while (al--){
+//         if(myarr[al] > maximum){
+//             maximum = myarr[al]
+//         }
+//     }
+//             return maximum;
+// };
+//   var myArray = result.split;
+//   var m = MyMax(myArray);
+//   console.log(m)
+  // var arr = result.split;
+  // function MyMax(myarr){
+  //   var al = myarr.length;
+  //   maximum = myarr[al-1];
+  //   while (al--){
+  //       if(myarr[al] > maximum){
+  //           maximum = myarr[al]
+  //       }
+  //   }
+  //           return maximum;
+  // };
+  // var myArray = result.split;
+  // var myArray = [];
+  // var max = MyMax(myArray);
+  // console.log(max)
+  //
+  // var result.split = function()
+  // console.log(Array.result.split([]))
+  // Array.result.split([])
+});
+// var myarr = result.split
+
+// result.split
+// let test
+// [Asum=Asum, Bsum=Bsum, Csum=Csum, Dsum=Dsum, Esum=Esum, Fsum=Fsum, Gsum=Gsum, Hsum=Hsum]
+// const type = ["藥崩潰型", "走在前面型", "走在後面型", "三千煩惱思型", "魔鬼思緒纏身型", "主宰反被宰型", "床是我的唯一型", "一問三不知型"];
+// const [Asum, Bsum, Csum, Dsum, Esum, Fsum, Gsum, Hsum] = type;
+// document.getElementById("demo").innerHTML = type.toString();
+// result.split(",") = test
+// result = ['Asum=5', 'Bsum=12', 'Csum=0', 'Dsum=6', 'Esum=12', 'Fsum=3', 'Gsum=5', 'H=9']
 // 查看結果
+// let Asum, Bsum, Csum, Dsum, Esum, Fsum, Gsum, Hsum;
+// let Asum, Bsum, Csum, Dsum, Esum, Fsum, Gsum, Hsum;
+// var Array = [result]
+// let result;
+// [result] = ["", "", "", "", "", "", "", ""];
+// console.log([result])
+// test
+// [a=5, b=7] = [1];
+
+// var result
+// and then?
+// Array.prototype.max = function (){
+//   var max = this[0];
+//   this.forEach (function(ele,index,arr){
+//   if(ele > max) {
+//   max = ele;
+//   }
+//   })
+//   return max;
+//   }
+//   var arr = [Asum,Bsum,Csum,Dsum,Esum,Fsum,Gsum,Hsum];
+//   arr.max(); // 最大值
+
