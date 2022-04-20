@@ -1132,6 +1132,13 @@ $("#btn-H-24-5").click(function(){
 $("#Anext").click(function Anext(){
   Asum = Ascore_1+Ascore_2+Ascore_3;
   // console.log("分數 = "+Asum);
+  // if(
+  //   Ascore_1.value == null ; Ascore_2.value=='' ; Ascore_3.value=='')
+  //   {alert('有漏填喔!');}
+    
+    
+  //   return false;
+  // }
   window.location.href = "test_2.html?Asum="+Asum;
 });
 
@@ -1258,19 +1265,35 @@ $("#Hresult").click(function Hresult(){
   for(i=0;i<myArray.length;i++){
     if(myArray[i]==m){
      console.log(type[i]+":"+myArray[i])
+ 
     }
    }
   //
   [myArray[0],myArray[1],myArray[2],myArray[3],myArray[4],myArray[5],myArray[6],myArray[7]]
-  ["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床是我的唯一型","一問三不知型"]
+  ["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床不只睡覺型","一問三不知型"]
   
+  // var el = document.querySelector('#list');
+  // var Len = type.length;
+  // var str = '';
+  // for(var i=0; i<Len; i++){
+  //   var content = '<li>'+ type[i].type +'</li>';
+  //   // el.innerHTML = content;
+  // }
+  // for(var i=0; i<Len; i++){
+  //   var content = '<li>'+ type[i].type +'</li>';
+    // str += content; //str=str+content
+    // 如果想知道 str 是什麼，可以在 console 查看
+  //   console.log(str);
+  // }
+  // el.innerHTML = str;
+  // window.location.href = "result.html"
   // for(i=0;i<myArray.length;i++){
   //   if(myArray[i]==m){
   //    console.log(myArray[i])
   //   }
     
   //  }
-  // document.write(test[0].substring(5)); 得出9，導至新頁面
+  // document.write(test[0].substring(5)); 得出9 導至新頁面
   // 可用
   // var myArray = result.split;
   // document.write(myArray[0].substring(5));
@@ -1351,4 +1374,15 @@ $("#Hresult").click(function Hresult(){
 //   }
 //   var arr = [Asum,Bsum,Csum,Dsum,Esum,Fsum,Gsum,Hsum];
 //   arr.max(); // 最大值
+// function check_select(Asum){
+//   if(test2.value == ""){
+//       alert("未填入「欄位二(JS驗證)」資料");
+//       return false;
+//   }else if(test3.value == ""){
+//       alert("未選擇選項");
+//       return false;
+//   }else{
+//       return true;
+//   }
+//   }
 
