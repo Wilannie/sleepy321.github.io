@@ -1130,15 +1130,7 @@ $("#btn-H-24-5").click(function(){
 
 // A得分/傳值
 $("#Anext").click(function Anext(){
-  
-  // console.log("分數 = "+Asum);
-  // if(
-  //   Ascore_1.value == null ; Ascore_2.value=='' ; Ascore_3.value=='')
-  //   {alert('有漏填喔!');}
-    
-    
-  //   return false;
-  // }
+
   if(typeof(Ascore_1)=='undefined'){
     alert('第一題尚未填選!');
   }else if(typeof(Ascore_2)=='undefined'){
@@ -1149,15 +1141,28 @@ $("#Anext").click(function Anext(){
     Asum = Ascore_1+Ascore_2+Ascore_3;
     window.location.href = "test_2.html?Asum="+Asum;
   }
-
+  
 });
 
-
+// 取值A
+var Asum = location.search.replace(/[^\d]/g, "")
+console.log(location.search)
+// console.log("分數 = "+Asum);
 // B得分/傳值
 $("#Bnext").click(function Bnext(){
+
+  if(typeof(Bscore_4)=='undefined'){
+    alert('第一題尚未填選!');
+  }else if(typeof(Bscore_5)=='undefined'){
+    alert('第二題尚未填選!');
+  }else if(typeof(Bscore_6)=='undefined'){
+    alert('第三題尚未填選!');
+  }else{
   Bsum = Bscore_4+Bscore_5+Bscore_6;
   console.log("分數 = "+Bsum);
   window.location.href = "test_3.html?"+temp+"&Bsum="+Bsum;
+  }
+
 });
 
 // 取值B
@@ -1170,42 +1175,95 @@ console.log("test = "+test);
 console.log(location.search);
 // C得分/傳值
 $("#Cnext").click(function Cnext(){
+
+  if(typeof(Cscore_7)=='undefined'){
+    alert('第一題尚未填選!');
+  }else if(typeof(Cscore_8)=='undefined'){
+    alert('第二題尚未填選!');
+  }else if(typeof(Cscore_9)=='undefined'){
+    alert('第三題尚未填選!');
+  }else{
   Csum = Cscore_7+Cscore_8+Cscore_9;
   console.log("C分數 = "+Csum);
   window.location.href = "test_4.html?"+temp+"&Csum="+Csum;
+  }
+
 });
 
-
+// 取值C
+var Csum = location.search.replace(/[^\d]/g, "")
 // D得分/傳值
 $("#Dnext").click(function Dnext(){
+
+  if(typeof(Dscore_10)=='undefined'){
+    alert('第一題尚未填選!');
+  }else if(typeof(Dscore_11)=='undefined'){
+    alert('第二題尚未填選!');
+  }else if(typeof(Dscore_12)=='undefined'){
+    alert('第三題尚未填選!');
+  }else{
   Dsum = Dscore_10+Dscore_11+Dscore_12;
   console.log("sum = "+Dsum);
   window.location.href = "test_5.html?"+temp+"&Dsum="+Dsum;
+  }
+
 });
 
+// 取值D
+var Dsum = location.search.replace(/[^\d]/g, "")
 // E得分/傳值
 $("#Enext").click(function Enext(){
+
+  if(typeof(Escore_13)=='undefined'){
+    alert('第一題尚未填選!');
+  }else if(typeof(Escore_14)=='undefined'){
+    alert('第二題尚未填選!');
+  }else if(typeof(Escore_15)=='undefined'){
+    alert('第三題尚未填選!');
+  }else{
   Esum = Escore_13+Escore_14+Escore_15;
   console.log("sum = "+Esum);
   window.location.href = "test_6.html?"+temp+"&Esum="+Esum;
+  }
+
 });
 
 // 取值E
 var Esum = location.search.replace(/[^\d]/g, "")
 // F得分/傳值
 $("#Fnext").click(function Fnext(){
+
+  if(typeof(Fscore_16)=='undefined'){
+    alert('第一題尚未填選!');
+  }else if(typeof(Fscore_17)=='undefined'){
+    alert('第二題尚未填選!');
+  }else if(typeof(Fscore_18)=='undefined'){
+    alert('第三題尚未填選!');
+  }else{
   Fsum = Fscore_16+Fscore_17+Fscore_18;
   console.log("sum = "+Fsum);
   window.location.href = "test_7.html?"+temp+"&Fsum="+Fsum;
+  }
+
 });
 
 // 取值F
 var Fsum = location.search.replace(/[^\d]/g, "")
 // G得分/傳值
 $("#Gnext").click(function Gnext(){
+
+  if(typeof(Gscore_19)=='undefined'){
+    alert('第一題尚未填選!');
+  }else if(typeof(Gscore_20)=='undefined'){
+    alert('第二題尚未填選!');
+  }else if(typeof(Gscore_21)=='undefined'){
+    alert('第三題尚未填選!');
+  }else{
   Gsum = Gscore_19+Gscore_20+Gscore_21;
   console.log("sum = "+Gsum);
   window.location.href = "test_8.html?"+temp+"&Gsum="+Gsum;
+  }
+
 });
 
 // 取值G
@@ -1214,6 +1272,14 @@ var Gsum = location.search.replace(/[^\d]/g, "")
 // $("#Hresult").replaceWith("<input type='submit' value='RESULT'>");
 // H得分/傳值
 $("#Hresult").click(function Hresult(){
+
+  if(typeof(Hscore_22)=='undefined'){
+    alert('第一題尚未填選!');
+  }else if(typeof(Hscore_23)=='undefined'){
+    alert('第二題尚未填選!');
+  }else if(typeof(Hscore_24)=='undefined'){
+    alert('第三題尚未填選!');
+  }else{
   Hsum = Hscore_22+Hscore_23+Hscore_24;
   var result =location.search.replace("?","").split("&");
   console.log(location.search);
@@ -1263,24 +1329,22 @@ $("#Hresult").click(function Hresult(){
             return maximum;
   };
   var m = MyMax(myArray);
-  // m= 12 //錯的
   console.log(m)
   //
-  var type = ["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床是我的唯一型","一問三不知型"];
+  var type = ["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床不只睡覺型","一問三不知型"];
   var anstype="";
   for(i=0;i<myArray.length;i++){
     if(myArray[i]==m){
-     
      console.log(type[i]+":"+myArray[i])
      anstype=anstype+(i+";")
     }
    }
- 
-    
   //
-  //[myArray[0],myArray[1],myArray[2],myArray[3],myArray[4],myArray[5],myArray[6],myArray[7]]
-  //["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床不只睡覺型","一問三不知型"]
   window.location.href = "result.html?"+"&AnsType="+anstype;
+  // [myArray[0],myArray[1],myArray[2],myArray[3],myArray[4],myArray[5],myArray[6],myArray[7]]
+  // ["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床不只睡覺型","一問三不知型"]
+  }
+});
   // var el = document.querySelector('#list');
   // var Len = type.length;
   // var str = '';
@@ -1349,7 +1413,7 @@ $("#Hresult").click(function Hresult(){
   // var result.split = function()
   // console.log(Array.result.split([]))
   // Array.result.split([])
-});
+
 // var myarr = result.split
 
 // result.split
