@@ -678,7 +678,7 @@ $("#btn-E-15-2").click(function(){
   $("#btn-E-15-5").css("background-color", '#0C1D44');
 });
 $("#btn-E-15-3").click(function(){
-  Ascore_15=2;
+  Escore_15=2;
   console.log("2");
   $("#btn-E-15-1").css("background-color", '#0C1D44');
   $("#btn-E-15-2").css("background-color", '#0C1D44');
@@ -1130,7 +1130,7 @@ $("#btn-H-24-5").click(function(){
 
 // A得分/傳值
 $("#Anext").click(function Anext(){
-  Asum = Ascore_1+Ascore_2+Ascore_3;
+  
   // console.log("分數 = "+Asum);
   // if(
   //   Ascore_1.value == null ; Ascore_2.value=='' ; Ascore_3.value=='')
@@ -1139,13 +1139,20 @@ $("#Anext").click(function Anext(){
     
   //   return false;
   // }
-  window.location.href = "test_2.html?Asum="+Asum;
+  if(typeof(Ascore_1)=='undefined'){
+    alert('第一題尚未填選!');
+  }else if(typeof(Ascore_2)=='undefined'){
+    alert('第二題尚未填選!');
+  }else if(typeof(Ascore_3)=='undefined'){
+    alert('第三題尚未填選!');
+  }else{
+    Asum = Ascore_1+Ascore_2+Ascore_3;
+    window.location.href = "test_2.html?Asum="+Asum;
+  }
+
 });
 
-// 取值A
-var Asum = location.search.replace(/[^\d]/g, "")
-console.log(location.search)
-// console.log("分數 = "+Asum);
+
 // B得分/傳值
 $("#Bnext").click(function Bnext(){
   Bsum = Bscore_4+Bscore_5+Bscore_6;
@@ -1168,8 +1175,7 @@ $("#Cnext").click(function Cnext(){
   window.location.href = "test_4.html?"+temp+"&Csum="+Csum;
 });
 
-// 取值C
-var Csum = location.search.replace(/[^\d]/g, "")
+
 // D得分/傳值
 $("#Dnext").click(function Dnext(){
   Dsum = Dscore_10+Dscore_11+Dscore_12;
@@ -1177,8 +1183,6 @@ $("#Dnext").click(function Dnext(){
   window.location.href = "test_5.html?"+temp+"&Dsum="+Dsum;
 });
 
-// 取值D
-var Dsum = location.search.replace(/[^\d]/g, "")
 // E得分/傳值
 $("#Enext").click(function Enext(){
   Esum = Escore_13+Escore_14+Escore_15;
@@ -1259,19 +1263,24 @@ $("#Hresult").click(function Hresult(){
             return maximum;
   };
   var m = MyMax(myArray);
+  // m= 12 //錯的
   console.log(m)
   //
   var type = ["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床是我的唯一型","一問三不知型"];
+  var anstype="";
   for(i=0;i<myArray.length;i++){
     if(myArray[i]==m){
+     
      console.log(type[i]+":"+myArray[i])
- 
+     anstype=anstype+(i+";")
     }
    }
+ 
+    
   //
-  [myArray[0],myArray[1],myArray[2],myArray[3],myArray[4],myArray[5],myArray[6],myArray[7]]
-  ["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床不只睡覺型","一問三不知型"]
-  
+  //[myArray[0],myArray[1],myArray[2],myArray[3],myArray[4],myArray[5],myArray[6],myArray[7]]
+  //["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床不只睡覺型","一問三不知型"]
+  window.location.href = "result.html?"+"&AnsType="+anstype;
   // var el = document.querySelector('#list');
   // var Len = type.length;
   // var str = '';
