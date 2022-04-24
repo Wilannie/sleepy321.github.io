@@ -1332,10 +1332,11 @@ $("#Hresult").click(function Hresult(){
   console.log(m)
   //
   var type = ["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床不只睡覺型","一問三不知型"];
+  var img = ["/images/result/type0.png","/images/result/type1.png","/images/result/type2.png","/images/result/type3.png","/images/result/type4.png","/images/result/type5.png","/images/result/type6.png","/images/result/type7.png"];
   var anstype="";
   for(i=0;i<myArray.length;i++){
     if(myArray[i]==m){
-     console.log(type[i]+":"+myArray[i])
+     console.log(type[i]+":"+myArray[i]+":"+img[i])
      anstype=anstype+(i+";")
     }
    }
@@ -1345,117 +1346,3 @@ $("#Hresult").click(function Hresult(){
   // ["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床不只睡覺型","一問三不知型"]
   }
 });
-  // var el = document.querySelector('#list');
-  // var Len = type.length;
-  // var str = '';
-  // for(var i=0; i<Len; i++){
-  //   var content = '<li>'+ type[i].type +'</li>';
-  //   // el.innerHTML = content;
-  // }
-  // for(var i=0; i<Len; i++){
-  //   var content = '<li>'+ type[i].type +'</li>';
-    // str += content; //str=str+content
-    // 如果想知道 str 是什麼，可以在 console 查看
-  //   console.log(str);
-  // }
-  // el.innerHTML = str;
-  // window.location.href = "result.html"
-  // for(i=0;i<myArray.length;i++){
-  //   if(myArray[i]==m){
-  //    console.log(myArray[i])
-  //   }
-    
-  //  }
-  // document.write(test[0].substring(5)); 得出9 導至新頁面
-  // 可用
-  // var myArray = result.split;
-  // document.write(myArray[0].substring(5));
-  // console.log(myArray[0]);
-
-  // var m = Math.max(myArray);
-  // console.log(m)
-
-  // let myArray;
-  // let to = myArray.substring(1, 4);
-  //NaN
-  
-  // document.write(test[0].substring(5));
-//   console.log(test[0].substring(5)) 
-// //   function MyMax(myarr){
-//     var al = myarr.length;
-//     maximum = myarr[al-1];
-//     while (al--){
-//         if(myarr[al] > maximum){
-//             maximum = myarr[al]
-//         }
-//     }
-//             return maximum;
-// };
-//   var myArray = result.split;
-//   var m = MyMax(myArray);
-//   console.log(m)
-  // var arr = result.split;
-  // function MyMax(myarr){
-  //   var al = myarr.length;
-  //   maximum = myarr[al-1];
-  //   while (al--){
-  //       if(myarr[al] > maximum){
-  //           maximum = myarr[al]
-  //       }
-  //   }
-  //           return maximum;
-  // };
-  // var myArray = result.split;
-  // var myArray = [];
-  // var max = MyMax(myArray);
-  // console.log(max)
-  //
-  // var result.split = function()
-  // console.log(Array.result.split([]))
-  // Array.result.split([])
-
-// var myarr = result.split
-
-// result.split
-// let test
-// [Asum=Asum, Bsum=Bsum, Csum=Csum, Dsum=Dsum, Esum=Esum, Fsum=Fsum, Gsum=Gsum, Hsum=Hsum]
-// const type = ["藥崩潰型", "走在前面型", "走在後面型", "三千煩惱思型", "魔鬼思緒纏身型", "主宰反被宰型", "床是我的唯一型", "一問三不知型"];
-// const [Asum, Bsum, Csum, Dsum, Esum, Fsum, Gsum, Hsum] = type;
-// document.getElementById("demo").innerHTML = type.toString();
-// result.split(",") = test
-// result = ['Asum=5', 'Bsum=12', 'Csum=0', 'Dsum=6', 'Esum=12', 'Fsum=3', 'Gsum=5', 'H=9']
-// 查看結果
-// let Asum, Bsum, Csum, Dsum, Esum, Fsum, Gsum, Hsum;
-// let Asum, Bsum, Csum, Dsum, Esum, Fsum, Gsum, Hsum;
-// var Array = [result]
-// let result;
-// [result] = ["", "", "", "", "", "", "", ""];
-// console.log([result])
-// test
-// [a=5, b=7] = [1];
-
-// var result
-// and then?
-// Array.prototype.max = function (){
-//   var max = this[0];
-//   this.forEach (function(ele,index,arr){
-//   if(ele > max) {
-//   max = ele;
-//   }
-//   })
-//   return max;
-//   }
-//   var arr = [Asum,Bsum,Csum,Dsum,Esum,Fsum,Gsum,Hsum];
-//   arr.max(); // 最大值
-// function check_select(Asum){
-//   if(test2.value == ""){
-//       alert("未填入「欄位二(JS驗證)」資料");
-//       return false;
-//   }else if(test3.value == ""){
-//       alert("未選擇選項");
-//       return false;
-//   }else{
-//       return true;
-//   }
-//   }
-
