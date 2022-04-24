@@ -9,13 +9,15 @@
   <!-- font awesome -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <!-- 自己的CSS放下面，權重較重，可以用CSS去更改 -->
-  <link rel="stylesheet" href="style_index.css">
+  <link rel="stylesheet" href="style_test_1.css">
 </head>
 <body>
-    <h1>你的礙睏類型為</h1>
+    <h1 id="re">你的礙睏類型為</h1>
     <p id="demo"></p>
+    <figure id="showpic"></figure>
 
     <button id="finaltype">點我展開</button>
+    <button id="pic">查看解說</button>
     <button id="returnhome">重返首頁</button>
 </body>
 <footer>
@@ -31,6 +33,7 @@
 
 <script>
     $("#returnhome").hide();
+    $("#pic").hide();
     var a;
     var b;
     $("#finaltype").click(function(){
@@ -38,7 +41,7 @@
         var type = ["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床不只睡覺型","一問三不知型"];
          b= a.split(";")
         if(a.length==1){
-            document.getElementById("demo").innerHTML+="<h1>"+type[a]+"</h1>";
+            document.getElementById("demo").innerHTML+="<p>"+type[a]+"</p>";
             // alert("你是"+type[a]);
         }else{
 
@@ -46,10 +49,27 @@
                 console.log(a[i])
                 var t= a[i]
                 console.log(type[t]);
-                document.getElementById("demo").innerHTML+="<h1>"+type[t]+"</h1>";
+                document.getElementById("demo").innerHTML+="<p>"+type[t]+"</p>";
             }
         }
         $("#finaltype").hide();
+        $("#pic").show();
+        $("#pic").click(function(){
+            if(a.length==1){
+            document.getElementById("showpic").innerHTML+="<p>"+img[a]+"</p>";
+            // alert("你是"+type[a]);
+        }else{
+
+            for(i=0;i<a.length;i++){
+                console.log(a[i])
+                var t= a[i]
+                console.log(type[t]);
+                document.getElementById("showpic").innerHTML+="<p>"+img[t]+"</p>";
+            }
+        }
+            var img = document.getElementById("img");
+        })
+
         $("#returnhome").show();
     });
     $("#returnhome").click(function(){
@@ -57,6 +77,10 @@
         window.location.href = "index.html";
     });
 </script>
-
+<p>校內展 黑天鵝展示廳</p>
+<p>5/2~5/6</p>
+<p>校外展 松山文創園區</p>
+<p>5/13~5/15</p>
+<!-- <p id="note">此結果皆為輔助技巧，若嚴重困擾還是先尋求專業醫師幫助</p> -->
 </body>
 </html>
