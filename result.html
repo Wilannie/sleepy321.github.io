@@ -39,7 +39,7 @@
     $("#finaltype").click(function(){
         a =location.search.replace(/[^\d]/g, "")
         var type = ["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床不只睡覺型","一問三不知型"];
-         b= a.split(";")
+        b= a.split(";")
         if(a.length==1){
             document.getElementById("demo").innerHTML+="<p>"+type[a]+"</p>";
             // alert("你是"+type[a]);
@@ -55,6 +55,9 @@
         $("#finaltype").hide();
         $("#pic").show();
         $("#pic").click(function(){
+            a =location.search.replace(/[^\d]/g, "")
+            var img = ["/images/result/type0.png","/images/result/type1.png","/images/result/type2.png","/images/result/type3.png","/images/result/type4.png","/images/result/type5.png","/images/result/type6.png","/images/result/type7.png"];
+            b= a.split(";")
             if(a.length==1){
             document.getElementById("showpic").innerHTML+="<figure>"+img[a]+"</figure>";
             // alert("你是"+type[a]);
@@ -63,7 +66,7 @@
             for(i=0;i<a.length;i++){
                 console.log(a[i])
                 var t= a[i]
-                console.log(type[t]);
+                console.log(img[t]);
                 document.getElementById("showpic").innerHTML+="<figure>"+img[t]+"</figure>";
             }
         }
