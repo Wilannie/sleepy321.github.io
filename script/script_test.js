@@ -1083,7 +1083,7 @@ $("#btn-H-23-5").click(function(){
 // H型Q24
 var Hscore_24;
 $("#btn-H-24-1").click(function(){
-  Ascore_24=0;
+  Hscore_24=0;
   console.log("0");
   $("#btn-H-24-1").css("background-color", '#4CAF50');
   $("#btn-H-24-2").css("background-color", '#0C1D44');
@@ -1126,10 +1126,10 @@ $("#btn-H-24-5").click(function(){
   $("#btn-H-24-3").css("background-color", '#0C1D44');
   $("#btn-H-24-4").css("background-color", '#0C1D44');
   $("#btn-H-24-5").css("background-color", '#4CAF50');
-});
+}); 
 
 // A得分/傳值
-$("#Anext").click(function Anext(){
+$("#Anext").click(function(){
 
   if(typeof(Ascore_1)=='undefined'){
     alert('第一題尚未填選!');
@@ -1149,7 +1149,7 @@ var Asum = location.search.replace(/[^\d]/g, "")
 console.log(location.search)
 // console.log("分數 = "+Asum);
 // B得分/傳值
-$("#Bnext").click(function Bnext(){
+$("#Bnext").click(function(){
 
   if(typeof(Bscore_4)=='undefined'){
     alert('第一題尚未填選!');
@@ -1174,7 +1174,7 @@ console.log("temp = "+temp);
 console.log("test = "+test);
 console.log(location.search);
 // C得分/傳值
-$("#Cnext").click(function Cnext(){
+$("#Cnext").click(function(){
 
   if(typeof(Cscore_7)=='undefined'){
     alert('第一題尚未填選!');
@@ -1193,7 +1193,7 @@ $("#Cnext").click(function Cnext(){
 // 取值C
 var Csum = location.search.replace(/[^\d]/g, "")
 // D得分/傳值
-$("#Dnext").click(function Dnext(){
+$("#Dnext").click(function(){
 
   if(typeof(Dscore_10)=='undefined'){
     alert('第一題尚未填選!');
@@ -1212,7 +1212,7 @@ $("#Dnext").click(function Dnext(){
 // 取值D
 var Dsum = location.search.replace(/[^\d]/g, "")
 // E得分/傳值
-$("#Enext").click(function Enext(){
+$("#Enext").click(function(){
 
   if(typeof(Escore_13)=='undefined'){
     alert('第一題尚未填選!');
@@ -1231,7 +1231,7 @@ $("#Enext").click(function Enext(){
 // 取值E
 var Esum = location.search.replace(/[^\d]/g, "")
 // F得分/傳值
-$("#Fnext").click(function Fnext(){
+$("#Fnext").click(function(){
 
   if(typeof(Fscore_16)=='undefined'){
     alert('第一題尚未填選!');
@@ -1250,7 +1250,7 @@ $("#Fnext").click(function Fnext(){
 // 取值F
 var Fsum = location.search.replace(/[^\d]/g, "")
 // G得分/傳值
-$("#Gnext").click(function Gnext(){
+$("#Gnext").click(function(){
 
   if(typeof(Gscore_19)=='undefined'){
     alert('第一題尚未填選!');
@@ -1271,7 +1271,7 @@ var Gsum = location.search.replace(/[^\d]/g, "")
 //轉成按鈕
 // $("#Hresult").replaceWith("<input type='submit' value='RESULT'>");
 // H得分/傳值
-$("#Hresult").click(function Hresult(){
+$("#Hnext").click(function(){
 
   if(typeof(Hscore_22)=='undefined'){
     alert('第一題尚未填選!');
@@ -1332,7 +1332,16 @@ $("#Hresult").click(function Hresult(){
   console.log(m)
   //
   var type = ["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床不只睡覺型","一問三不知型"];
-  var img = ["/images/result/type0.png","/images/result/type1.png","/images/result/type2.png","/images/result/type3.png","/images/result/type4.png","/images/result/type5.png","/images/result/type6.png","/images/result/type7.png"];
+  var img = new Array(); //新增陣列
+  img[0] = "/images/type0.png";
+  img[1] = "/images/type1.png";
+  img[2] = "/images/type2.png";
+  img[3] = "/images/type3.png";
+  img[4] = "/images/type4.png";
+  img[5] = "/images/type5.png";
+  img[6] = "/images/type6.png";
+  img[7] = "/images/type7.png";//後面沒用到但inner行得通
+  
   var anstype="";
   for(i=0;i<myArray.length;i++){
     if(myArray[i]==m){
