@@ -7,83 +7,150 @@
  <title>礙睏檢測</title>
  <link rel="icon" href="images/favicon.ico.png"><!-- icon要改 -->
   <!-- font awesome -->
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
   <!-- 自己的CSS放下面，權重較重，可以用CSS去更改 -->
-  <link rel="stylesheet" href="style_test_1.css">
+  <link rel="stylesheet" href="style_result.css">
 </head>
 <body>
-    <h1 id="re">你的礙睏類型為</h1>
-    <p id="demo"></p>
-    <figure id="showpic"></figure>
+    <div class="wrapper">
+         <header>
+             <h1 class="logo">
+                 <img src="images/logo_large_logo.png" alt="礙睏檢測">
+             </h1>
+         </header>
+         <main>
+             <div class="resultbox">
+                 <div class="text-1">
+                     <div class="justify-1"><span id="text-color">檢測結果</span></div>
+                 </div>
+                 <!-- <div class="text-2">
+                     <div class="demoblock"><div class="demo"><p id="demo"></p></div></div> -->
+                 </div> <!-- 要置中 -->
+                 <div class="text-3">
+                     <div class="func-1">
+                         <div class="justify-1">
+                            <button id="finaltype"><span>點我展開</span></button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="imgbox">
+                 <div class="text-4">
+                     <div id="camera">
+                         <div class="cam-2"><span>檢測結果可能有多種，哪個問題最嚴重最干擾你，優先解決哪一型問題◣截圖並分享</span></div>
+                     </div>
+                </div>
+                 <div class="block">
+                    <div id="showbox"></div>
+                 </div>
+             </div>
+             <div class="funcbox">
+                 <div class="func-2">
+                     <div class="justify-2">
+                        <button id="again"><span>再測一次</span></button>
+                        <button id="linepoint">
+                            <a href="https://liff.line.me/1654883656-XqwKRkd4?aid=178udpaf&cid=090884CC290C4B94BB42C10CBDE18815">
+                            集line點數</a>
+                        </button>
+                        </div>
+                 </div>
+             </div>
+             <div class="exbox">
+                 <div class="justify-3">
+                    <div class="exhibition">
+                        <div class="text-5">
+                           <div id="say"><i class="fa-solid fa-bullhorn"></i></div>
+                        </div>
+                        <div class="text-6">
+                           <div class="word">
+                               <div id="title-word">
+                                   <span>展覽資訊</span>
+                               </div>
+                               校內展 黑天鵝展示廳<br>
+                               5/2~5/6<br>
+                               校外展 松山文創園區<br>
+                               5/13~5/15<br>
+                           </div>
+                        </div>
+                        <div class="text-7">
+                            <div class="icon-svg">
+                               <nav>
+                                   <ul class="icon">
+                                       <li><a href="https://www.facebook.com/profile.php?id=100076115055172"><img src="images/icon-fb.svg" alt="連結至Facebook"></a></li>
+                                       <li><a href="https://instagram.com/i_sleep.321?igshid=YmMyMTA2M2Y="><img src="images/icon-ig.svg" alt="連結至Instagram"></a></li>
+                                   </ul>
+                               </nav>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                 
+             </div>
+         </main>
+         <footer>
+             <div class="copyright">淡江大學資訊傳播學系第21屆畢業製作《礙睏》 © 2022</div>
+         </footer>
+    </div>
+    
+    <!-- jQuery原生碼 CDN -->
+    <script src="./script/jquery-3.6.0.min.js"></script>
+    <!-- smoove js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+    <!-- 自訂的JS要放最下面，因為要先載入jQuery原生碼才能執行下面步驟 -->
+    <script src="./script/script_test.js"></script>
 
-    <button id="finaltype">點我展開</button>
-    <button id="pic">查看解說</button>
-    <button id="returnhome">重返首頁</button>
-</body>
-<footer>
-    <div class="copyright">淡江大學資訊傳播學系第21屆畢業製作《礙睏》 © 2022</div>
-</footer>
-
-<!-- jQuery原生碼 CDN -->
-<script src="./script/jquery-3.6.0.min.js"></script>
-<!-- smoove js CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
-<!-- 自訂的JS要放最下面，因為要先載入jQuery原生碼才能執行下面步驟 -->
-<script src="./script/script_test.js"></script>
-
-<script>
-    $("#returnhome").hide();
-    $("#pic").hide();
+    <script>
+    $("#again").hide();
+    $("#linepoint").hide();
     var a;
-    var b;
     $("#finaltype").click(function(){
         a =location.search.replace(/[^\d]/g, "")
         var type = ["藥崩潰型","走在前面型","走在後面型","三千煩惱型","魔鬼思緒纏身型","主宰反被宰型","床不只睡覺型","一問三不知型"];
+        var img = new Array(); //新增陣列
+            img[0] = "type0.png";
+            img[1] = "type1.png";
+            img[2] = "type2.png";
+            img[3] = "type3.png";
+            img[4] = "type4.png";
+            img[5] = "type5.png";
+            img[6] = "type6.png";
+            img[7] = "type7.png";
         b= a.split(";")
         if(a.length==1){
-            document.getElementById("demo").innerHTML+="<p>"+type[a]+"</p>";
-            // alert("你是"+type[a]);
+            // document.getElementById("demo").innerHTML+="<p>"+type[a]+"</p>";
+            var table = "<div>";
+            table += "<div>" + '<img src="images/' + img[a] + '"></div>';
+            document.getElementById("showbox").innerHTML = table; //成功
+            
         }else{
 
             for(i=0;i<a.length;i++){
                 console.log(a[i])
                 var t= a[i]
+                var g = img[i]
                 console.log(type[t]);
-                document.getElementById("demo").innerHTML+="<p>"+type[t]+"</p>";
+                // document.getElementById("demo").innerHTML+="<p>"+type[t]+"</p>";
+                
+                var table2 = "<div>";
+                table2 += "<div>" + '<img src="images/type' + t + '.png"></div>';
+                document.getElementById("showbox").innerHTML += table2; //成功
+                
             }
         }
         $("#finaltype").hide();
-        $("#pic").show();
-        $("#pic").click(function(){
-            a =location.search.replace(/[^\d]/g, "")
-            var img = ["/images/result/type0.png","/images/result/type1.png","/images/result/type2.png","/images/result/type3.png","/images/result/type4.png","/images/result/type5.png","/images/result/type6.png","/images/result/type7.png"];
-            b= a.split(";")
-            if(a.length==1){
-            document.getElementById("showpic").innerHTML+="<figure>"+img[a]+"</figure>";
-            // alert("你是"+type[a]);
-        }else{
-
-            for(i=0;i<a.length;i++){
-                console.log(a[i])
-                var t= a[i]
-                console.log(img[t]);
-                document.getElementById("showpic").innerHTML+="<figure>"+img[t]+"</figure>";
-            }
-        }
-            // var img = document.getElementById("img");
-        })
-
-        $("#returnhome").show();
+        
+        $("#pic").hide();
+        $("#again").show();
+        $("#linepoint").show();
+        
     });
-    $("#returnhome").click(function(){
+    $("#again").click(function(){
 
         window.location.href = "index.html";
     });
-</script>
-<p>校內展 黑天鵝展示廳</p>
-<p>5/2~5/6</p>
-<p>校外展 松山文創園區</p>
-<p>5/13~5/15</p>
-<!-- <p id="note">此結果皆為輔助技巧，若嚴重困擾還是先尋求專業醫師幫助</p> -->
+ </script>
+
+
+ <!-- <p id="note">標註在解方ppt:此結果皆為輔助技巧，若嚴重困擾還是先尋求專業醫師幫助</p> -->
 </body>
 </html>
