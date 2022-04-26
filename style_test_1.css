@@ -20,12 +20,14 @@ img{
     display: block;
     width: 100%;
 }
+/* header, main, footer{
+    display: flex;
+} */
 .wrapper{
     position: relative;
     min-height: 100%;
 }
 /* ----------header---------- */
-
 header .logo{
     width: 20%;
     display: flex;
@@ -34,23 +36,52 @@ header .logo{
     margin: 30px auto;
     /* position: relative; */
 }
-header h2{
+header h3{
     display: flex;
     justify-content: center;
     color: #C1DFE8;
     /* position: absolute; */
     /* top: 5vh; */
 }
+/* header p.process{
+
+} */
 header p{
     display: flex;
     justify-content: center;
     color: #c1dfe880;
+}
+/* .g-container {
+    width: 240px;
+    height: 25px;
+    border-radius: 25px;
+    background: #eee;
+}
+.g-progress {
+    width: 50%;
+    height: inherit;
+    border-radius: 25px 0 0 25px;
+    background: #0f0;
+} */
+meter {
+    width: 200px;
 }
 /* ----------main---------- */
 /* main{
     position: relative;
     display: inline;
     height: 80vh;
+} */
+/* #re{
+    font-size: 4vmin;
+    font-weight: 300;
+    color: #C1DFE8;
+    
+}
+.information{
+    font-size: 2vmin;
+    font-weight: 200;
+    color: #C1DFE8;
 } */
 .box_test{
     top: 5vh;
@@ -126,6 +157,9 @@ header p{
     /* letter-spacing: .1rem; 字距 */
     /* font-size: 1rem; */
 }
+/* input:required {
+    background-color: yellow;
+} */
 /* .btn_next a:after{
     content: '»';
     position: relative;
@@ -158,7 +192,19 @@ header p{
             user-select: none;
   }
    */
-
+/* result.html */
+#demo a:hover{
+    color: #fc3a63; /* 當滑鼠經過時，超連結文字顏色變成桃紅色 */
+    position: relative; /* 當滑鼠經過超連結時，超連結往右下位移1像素 */
+    top: 1px;
+    left: 1px;
+  }
+  #demo a:visited{
+    color: #ffa200; /* 當滑鼠經過時，超連結文字顏色變成桃紅色 */
+    top: 1px;
+    left: 1px;
+  }
+  
 /* ----------footer---------- */
 footer{
     position: absolute;
@@ -171,12 +217,34 @@ footer{
     /* align-items: center; */
     /* background-color: #C1DFE8; */
 }
+.footerbox{
+    position: relative;
+    display: block;
+    align-items: center;
+    /* background-color: #D2AD9F; */
+    /* border: solid 5px #FFF; */
+}
+footer .icon{
+    /* margin-right: 20px; */
+    /* position: absolute;  */
+    /* margin: auto; */
+    right: 10px;
+    top: 100px;
+    cursor: pointer;
+}
 .copyright{
     display: flex;
     color: #C1DFE8;
     font-size: 0.5rem;
-    /* margin: 0 auto; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
     /* position: relative; */
+}
+
+#demo{
+    font-size: 3vmin;
+    font-weight: 300;
+    color: #4CAF50;
+    /* cursor: pointer; */
 }
