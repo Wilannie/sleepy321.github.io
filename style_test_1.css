@@ -36,7 +36,7 @@ header .logo{
     margin: 30px auto;
     /* position: relative; */
 }
-header h2{
+header h3{
     display: flex;
     justify-content: center;
     color: #C1DFE8;
